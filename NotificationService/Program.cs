@@ -31,14 +31,13 @@ var deliverEndpoint = group.MapPost("/deliver", (DeliverNotificationRequest req,
 {
     // Логика сервиса: всегда OK (сбои/таймауты моделируются ToxiProxy, а не кодом сервиса)
     log.LogInformation(
-        "Уведомление получено. messageId={MessageId}, type={Type}, payloadSize={PayloadSize}",
-        req.MessageId, req.Type, req.Payload.GetRawText().Length);
+        "Уведомление получено. type={Type}",
+        req.Type);
 
     return Results.Ok(new
     {
         ok = true,
         receivedAtUtc = DateTime.UtcNow,
-        messageId = req.MessageId,
         type = req.Type
     });
 })
@@ -62,7 +61,5 @@ group.MapGet("/ping", () => Results.Ok(new { ok = true, ts = DateTime.UtcNow }))
 app.Run();
 
 public sealed record DeliverNotificationRequest(
-    Guid MessageId,
-    string Type,
-    JsonElement Payload
+    string Type
 );

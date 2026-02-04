@@ -48,9 +48,7 @@ else
 {
     order
         .WaitFor(notification)
-        .WaitFor(payment)
-        .WithEnvironment("Services__NotificationBaseUrl", "http://notificationservice")
-        .WithEnvironment("Services__PaymentBaseUrl", "http://paymentservice");
+        .WaitFor(payment);
 }
 
 builder.AddProject<Projects.ApiGateway>("apigateway")

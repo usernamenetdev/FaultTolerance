@@ -11,7 +11,7 @@ builder.AddServiceDefaults();
 
 builder.Services.AddOpenApi();
 
-builder.AddSqlServerDbContext<PaymentService.Data.PaymentDbContext>(connectionName: "paymentdb");
+builder.AddSqlServerDbContext<PaymentDbContext>(connectionName: "paymentdb");
 
 builder.Services.AddScoped<PaymentApplicationService>();
 builder.Services.AddResilienceMetrics();
@@ -31,7 +31,7 @@ if (app.Environment.IsDevelopment())
 
 using (var scope = app.Services.CreateScope())
 {
-    var db = scope.ServiceProvider.GetRequiredService<PaymentService.Data.PaymentDbContext>();
+    var db = scope.ServiceProvider.GetRequiredService<PaymentDbContext>();
     db.Database.Migrate();
 }
 

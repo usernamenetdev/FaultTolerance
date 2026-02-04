@@ -29,7 +29,6 @@ public static class Extensions
 
         builder.Services.ConfigureHttpClientDefaults(http =>
         {
-            // Turn on service discovery by default
             http.AddServiceDiscovery();
         });
 
