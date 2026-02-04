@@ -1,0 +1,21 @@
+<Solution>
+  <Project Path="ApiGateway/ApiGateway.csproj">
+    <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
+  </Project>
+  <Project Path="Graduation.AppHost/Graduation.AppHost.csproj">
+    <BuildDependency Project="ApiGateway/ApiGateway.csproj" />
+    <BuildDependency Project="NotificationService/NotificationService.csproj" />
+    <BuildDependency Project="OrderService/OrderService.csproj" />
+    <BuildDependency Project="PaymentService/PaymentService.csproj" />
+  </Project>
+  <Project Path="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
+  <Project Path="NotificationService/NotificationService.csproj">
+    <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
+  </Project>
+  <Project Path="OrderService/OrderService.csproj">
+    <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
+  </Project>
+  <Project Path="PaymentService/PaymentService.csproj">
+    <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
+  </Project>
+</Solution>

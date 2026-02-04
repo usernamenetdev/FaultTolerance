@@ -1,0 +1,82 @@
+{
+  "openapi": "3.1.1",
+  "info": {
+    "title": "NotificationService | v1",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:58256"
+    }
+  ],
+  "paths": {
+    "/api/notifications/deliver": {
+      "post": {
+        "tags": [
+          "Notifications"
+        ],
+        "summary": "Приём уведомления из Outbox",
+        "description": "NotificationService является заглушкой отправки уведомлений и всегда возвращает 200 OK. Негативные сценарии (задержки/таймауты/разрывы соединения) моделируются средствами ToxiProxy.",
+        "operationId": "DeliverNotification",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliverNotificationRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/notifications/ping": {
+      "get": {
+        "tags": [
+          "Notifications"
+        ],
+        "operationId": "Ping",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DeliverNotificationRequest": {
+        "required": [
+          "messageId",
+          "type",
+          "payload"
+        ],
+        "type": "object",
+        "properties": {
+          "messageId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "type": {
+            "type": "string"
+          },
+          "payload": {
+            "$ref": "#/components/schemas/JsonElement"
+          }
+        }
+      },
+      "JsonElement": { }
+    }
+  },
+  "tags": [
+    {
+      "name": "Notifications"
+    }
+  ]
+}

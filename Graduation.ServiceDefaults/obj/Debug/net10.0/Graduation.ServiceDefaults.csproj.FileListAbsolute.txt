@@ -1,0 +1,12 @@
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\bin\Debug\net10.0\Graduation.ServiceDefaults.deps.json
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\bin\Debug\net10.0\Graduation.ServiceDefaults.dll
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\bin\Debug\net10.0\Graduation.ServiceDefaults.pdb
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.AssemblyInfo.cs
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.dll
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\refint\Graduation.ServiceDefaults.dll
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.pdb
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\ref\Graduation.ServiceDefaults.dll
