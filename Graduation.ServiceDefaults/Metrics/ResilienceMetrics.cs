@@ -24,11 +24,33 @@ public sealed class ResilienceMetrics : IResilienceMetrics
             description: "Результаты обработки Idempotency-Key: miss/hit/in_progress/conflict");
 
     // Outbox: outbox_pending_count (UpDown)
-    private static readonly UpDownCounter<long> OutboxPendingCount =
-        Meter.CreateUpDownCounter<long>(
+    // --- Outbox: backlog (Gauge) + activity (Counters) ---
+    private static long _outboxPending;
+
+    private static readonly ObservableGauge<long> OutboxPendingGauge =
+        Meter.CreateObservableGauge<long>(
             name: "outbox_pending_count",
             unit: "{message}",
+            observeValue: () => Interlocked.Read(ref _outboxPending),
             description: "Текущее количество сообщений в outbox, ожидающих отправки");
+
+    private static readonly Counter<long> OutboxEnqueuedTotal =
+        Meter.CreateCounter<long>(
+            name: "outbox_enqueued_total",
+            unit: "{message}",
+            description: "Сколько outbox-сообщений создано");
+
+    private static readonly Counter<long> OutboxDispatchedTotal =
+        Meter.CreateCounter<long>(
+            name: "outbox_dispatched_total",
+            unit: "{message}",
+            description: "Сколько outbox-сообщений закрыто (Sent или Failed)");
+
+    private static readonly Counter<long> OutboxDispatchResultTotal =
+        Meter.CreateCounter<long>(
+            name: "outbox_dispatch_result_total",
+            unit: "{message}",
+            description: "Результат обработки outbox-сообщений: sent/failed");
 
     public void CircuitBreakerShortCircuit(string dependency)
     {
@@ -58,7 +80,26 @@ public sealed class ResilienceMetrics : IResilienceMetrics
             new KeyValuePair<string, object?>("result", resultTag));
     }
 
-    public void OutboxEnqueued() => OutboxPendingCount.Add(1);
+    // Вызывать ПОСЛЕ успешного SaveChanges() при создании outbox
+    public void OutboxEnqueued()
+    {
+        OutboxEnqueuedTotal.Add(1);
+        Interlocked.Increment(ref _outboxPending);
+    }
 
-    public void OutboxDispatched() => OutboxPendingCount.Add(-1);
+    // Вызывать при переводе сообщения в Sent ИЛИ Failed (т.е. оно больше не Pending)
+    public void OutboxDispatched()
+    {
+        OutboxDispatchedTotal.Add(1);
+        Interlocked.Decrement(ref _outboxPending);
+    }
+
+    public void OutboxPendingSync(long pending) =>
+        Interlocked.Exchange(ref _outboxPending, pending);
+
+    public void OutboxDispatchResult(OutboxDispatchResult result)
+    {
+        var tag = result == Metrics.OutboxDispatchResult.Sent ? "sent" : "failed";
+        OutboxDispatchResultTotal.Add(1, new KeyValuePair<string, object?>("result", tag));
+    }
 }

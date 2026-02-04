@@ -48,7 +48,9 @@ else
 {
     order
         .WaitFor(notification)
-        .WaitFor(payment);
+        .WaitFor(payment)
+        .WithReference(notification)
+        .WithReference(payment);
 }
 
 builder.AddProject<Projects.ApiGateway>("apigateway")

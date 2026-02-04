@@ -78,7 +78,7 @@ app.MapPost("/payments", async (
 app.MapGet("/payments/{id:guid}", async (Guid id, PaymentDbContext db, CancellationToken ct) =>
 {
     var p = await db.Payments.AsNoTracking()
-        .SingleOrDefaultAsync(x => x.Id == id, ct);
+        .SingleOrDefaultAsync(x => x.OrderId == id, ct);
 
     if (p is null)
         return Results.NotFound(new { error = "PaymentNotFound" });

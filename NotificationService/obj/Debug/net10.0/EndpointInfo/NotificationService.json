@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:58256"
+      "url": "http://localhost:59447"
     }
   ],
   "paths": {
@@ -53,25 +53,15 @@
     "schemas": {
       "DeliverNotificationRequest": {
         "required": [
-          "messageId",
-          "type",
-          "payload"
+          "type"
         ],
         "type": "object",
         "properties": {
-          "messageId": {
-            "type": "string",
-            "format": "uuid"
-          },
           "type": {
             "type": "string"
-          },
-          "payload": {
-            "$ref": "#/components/schemas/JsonElement"
           }
         }
-      },
-      "JsonElement": { }
+      }
     }
   },
   "tags": [

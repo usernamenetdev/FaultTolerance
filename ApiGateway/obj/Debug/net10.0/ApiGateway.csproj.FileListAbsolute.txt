@@ -58,3 +58,4 @@ C:\Users\soswe\Desktop\ВКР\App\ApiGateway\bin\Debug\net10.0\Graduation.Servic
 C:\Users\soswe\Desktop\ВКР\App\ApiGateway\bin\Debug\net10.0\Graduation.ServiceDefaults.pdb
 C:\Users\soswe\Desktop\ВКР\App\ApiGateway\bin\Debug\net10.0\System.IO.Hashing.dll
 C:\Users\soswe\Desktop\ВКР\App\ApiGateway\bin\Debug\net10.0\Yarp.ReverseProxy.dll
+C:\Users\soswe\Desktop\ВКР\App\ApiGateway\obj\Debug\net10.0\ApiGateway.sourcelink.json

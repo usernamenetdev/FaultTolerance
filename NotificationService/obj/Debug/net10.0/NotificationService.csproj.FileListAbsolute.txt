@@ -57,3 +57,4 @@ C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Polly.Ra
 C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Graduation.ServiceDefaults.dll
 C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Graduation.ServiceDefaults.pdb
 C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\soswe\Desktop\ВКР\App\NotificationService\obj\Debug\net10.0\NotificationService.sourcelink.json

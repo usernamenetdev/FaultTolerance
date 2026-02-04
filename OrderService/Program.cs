@@ -1,9 +1,12 @@
 using Graduation.ServiceDefaults.Metrics;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Http.Resilience;
 using Microsoft.OpenApi;
+using OrderService.Application;
+using OrderService.Data;
+using OrderService.Domain;
 using OrderService.Infrastructure;
 using Polly;
-using Polly.CircuitBreaker;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +16,10 @@ builder.Services.AddOpenApi();
 
 builder.AddSqlServerDbContext<OrderDbContext>(connectionName: "orderdb");
 
-builder.Services.AddScoped<OrderApplicationService>();
+builder.Services.Configure<OutboxDispatcherOptions>(builder.Configuration.GetSection("Outbox"));
+
+builder.Services.AddScoped<OutboxService>();
+builder.Services.AddScoped<PaymentService>();
 builder.Services.AddResilienceMetrics();
 
 builder.Services.AddHttpClient<PaymentClient>("PaymentClient", client =>
@@ -23,6 +29,8 @@ builder.Services.AddHttpClient<PaymentClient>("PaymentClient", client =>
 })
 .AddStandardResilienceHandler(options =>
 {
+    options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
+
     options.Retry.MaxRetryAttempts = 3;
     options.Retry.Delay = TimeSpan.FromMilliseconds(200);
     options.Retry.BackoffType = DelayBackoffType.Exponential;
@@ -38,9 +46,13 @@ builder.Services.AddHttpClient<NotificationClient>("NotificationClient", client 
 {
     client.BaseAddress = new(builder.Configuration["Services:NotificationBaseUrl"]
                                  ?? "http://notificationservice");
+
+    var a = 0;
 })
 .AddStandardResilienceHandler(options =>
 {
+    options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
+
     options.Retry.MaxRetryAttempts = 3;
     options.Retry.Delay = TimeSpan.FromMilliseconds(200);
     options.Retry.BackoffType = DelayBackoffType.Exponential;
@@ -54,6 +66,7 @@ builder.Services.AddHttpClient<NotificationClient>("NotificationClient", client 
     options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(15);
 });
 
+builder.Services.AddHostedService<OutboxDispatcherHostedService>();
 
 var app = builder.Build();
 
@@ -74,6 +87,7 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
+/*
 app.MapPost("/orders", async (
     HttpRequest http,
     CreateOrderRequest request,
@@ -102,10 +116,11 @@ app.MapPost("/orders", async (
     });
     return Task.CompletedTask;
 });
+*/
 
 app.MapPost("/magic-link", async Task<IResult> (
     HttpContext http,
-    NotificationClient notification,
+    OutboxService svc,
     ResilienceMetrics metrics,
     CancellationToken ct) =>
 {
@@ -115,26 +130,34 @@ app.MapPost("/magic-link", async Task<IResult> (
 
     try
     {
-        await notification.SendMagicLinkAsync(userId, ct);
+        await svc.CreateOutboxMessageAsync(OutboxType.Magiclink, userId, ct);
         return Results.Ok(new { status = "sent" });
-    }
-    catch (BrokenCircuitException)
-    {
-        metrics.CircuitBreakerShortCircuit("notificationservice");
-        return Results.StatusCode(StatusCodes.Status503ServiceUnavailable);
+
     }
     catch (TaskCanceledException)
     {
         return Results.StatusCode(StatusCodes.Status504GatewayTimeout);
     }
-    catch (HttpRequestException)
-    {
-        return Results.StatusCode(StatusCodes.Status502BadGateway);
-    }
     catch (Exception)
     {
         return Results.StatusCode(StatusCodes.Status500InternalServerError);
     }
+})
+.AddOpenApiOperationTransformer((operation, ctx, ct) => {
+    operation.Parameters ??= new List<IOpenApiParameter>();
+
+    operation.Parameters.Add(new OpenApiParameter
+    {
+        Name = "X-User-Id",
+        In = ParameterLocation.Header,
+        Required = true,
+        Description = "Идентификатор пользователя",
+        Schema = new OpenApiSchema
+        {
+            Type = JsonSchemaType.String
+        }
+    });
+    return Task.CompletedTask;
 });
 
 app.Run();

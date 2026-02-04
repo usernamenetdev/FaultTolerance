@@ -1,18 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OrderService.Domain;
 
-namespace PaymentService.Data
+namespace OrderService.Data
 {
-    public sealed class PaymentDbContext : DbContext
+    public sealed class OrderDbContext : DbContext
     {
-        public PaymentDbContext(DbContextOptions<PaymentDbContext> options) : base(options) { }
+        public OrderDbContext(DbContextOptions<OrderDbContext> options) : base(options) { }
 
         public DbSet<Order> Orders => Set<Order>();
         public DbSet<OutboxMessage> OutboxMessages => Set<OutboxMessage>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(PaymentDbContext).Assembly);
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(OrderDbContext).Assembly);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

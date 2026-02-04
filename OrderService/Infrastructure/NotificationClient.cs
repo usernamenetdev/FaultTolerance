@@ -1,6 +1,4 @@
 ﻿using OrderService.Contracts;
-using System.Net.Http.Json;
-using System.Text;
 
 namespace OrderService.Infrastructure;
 

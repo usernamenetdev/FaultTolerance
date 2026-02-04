@@ -13,6 +13,7 @@ namespace PaymentService.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(PaymentDbContext).Assembly);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

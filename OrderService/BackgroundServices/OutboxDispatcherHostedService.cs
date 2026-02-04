@@ -1,105 +1,150 @@
 ﻿using Graduation.ServiceDefaults.Metrics;
-using OrderService.Contracts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Microsoft.Identity.Client;
+using OrderService.Data;
+using OrderService.Domain;
+using OrderService.Infrastructure;
 using Polly.CircuitBreaker;
 
-namespace OrderService.BackgroundServices
+namespace OrderService.Application;
+
+public sealed class OutboxDispatcherOptions
 {
-    public class OutboxDispatcherHostedService : BackgroundService
+    public int BatchSize { get; set; } = 50;
+    public TimeSpan PollInterval { get; set; } = TimeSpan.FromSeconds(1);
+
+    public int MaxAttempts { get; set; } = 8;
+
+    // Экспоненциальный backoff
+    public TimeSpan BackoffBase { get; set; } = TimeSpan.FromSeconds(1);
+    public TimeSpan BackoffMax { get; set; } = TimeSpan.FromSeconds(30);
+}
+
+public sealed class OutboxDispatcherHostedService : BackgroundService
+{
+    private readonly IServiceScopeFactory _scopeFactory;
+    private readonly IOptions<OutboxDispatcherOptions> _opt;
+
+    public OutboxDispatcherHostedService(
+        IServiceScopeFactory scopeFactory,
+        IOptions<OutboxDispatcherOptions> opt)
     {
-        private readonly IServiceScopeFactory _scopeFactory;
-        private readonly IHttpClientFactory _httpClientFactory;
-        private readonly IResilienceMetrics _metrics;
-        private readonly ILogger<OutboxDispatcherHostedService> _logger;
+        _scopeFactory = scopeFactory;
+        _opt = opt;
+    }
 
-        public OutboxDispatcherHostedService(IServiceScopeFactory scopeFactory,
-                                             IHttpClientFactory httpClientFactory,
-                                             IResilienceMetrics metrics,
-                                             ILogger<OutboxDispatcherHostedService> logger)
-        {
-            _scopeFactory = scopeFactory;
-            _httpClientFactory = httpClientFactory;
-            _metrics = metrics;
-            _logger = logger;
-        }
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
 
-        protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+        await SyncPendingGaugeAtStartup(stoppingToken);
+
+        var timer = new PeriodicTimer(_opt.Value.PollInterval);
+
+        while (await timer.WaitForNextTickAsync(stoppingToken))
         {
-            // Запуск бесконечного цикла обработки Outbox
-            while (!stoppingToken.IsCancellationRequested)
+            try
             {
-                try
-                {
-                    using var scope = _scopeFactory.CreateScope();
-                    var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
-
-                    // Выбираем все необработанные сообщения
-                    var pendingMessages = await db.OutboxMessages
-                        .Where(msg => !msg.Processed)
-                        .ToListAsync(stoppingToken);
-
-                    if (pendingMessages.Any())
-                    {
-                        var client = _httpClientFactory.CreateClient("NotificationClient");
-                        foreach (var msg in pendingMessages)
-                        {
-                            // Формируем запрос к NotificationService
-                            var notification = new DeliverRequest
-                            {
-                                OrderId = msg.OrderId,
-                                PaymentId = msg.PaymentId,
-                                UserId = msg.UserId,
-                                Total = msg.Total,
-                                Currency = msg.Currency
-                            };
-                            HttpResponseMessage response;
-                            try
-                            {
-                                response = await client.PostAsJsonAsync("/notifications/receipt", notification, stoppingToken);
-                            }
-                            catch (BrokenCircuitException)
-                            {
-                                _metrics.CircuitBreakerShortCircuit("notificationservice");
-                                _logger.LogWarning("NotificationService circuit open - skipping send for now");
-                                // Не помечаем сообщение обработанным, попробуем позже
-                                continue;
-                            }
-                            catch (HttpRequestException ex)
-                            {
-                                _logger.LogWarning(ex, "Failed to send notification for Payment {PaymentId}", msg.PaymentId);
-                                // Оставляем в pending для повторной попытки
-                                continue;
-                            }
-
-                            if (response.IsSuccessStatusCode)
-                            {
-                                // Успешно отправлено
-                                msg.Processed = true;
-                                msg.ProcessedAtUtc = DateTime.UtcNow;
-                                _metrics.OutboxDispatched();  // декрементируем счётчик pending
-                                _logger.LogInformation("Outbox message {MessageId} for Payment {PaymentId} sent successfully",
-                                                       msg.Id, msg.PaymentId);
-                            }
-                            else
-                            {
-                                // Сервер вернул ошибку (напр., 500) – можно залогировать и оставить сообщение для повтора
-                                _logger.LogWarning("NotificationService returned status {StatusCode} for Payment {PaymentId}",
-                                                   response.StatusCode, msg.PaymentId);
-                            }
-                        }
-                        // Сохраняем изменения (пометка Processed) вне цикла, одним коммитом
-                        await db.SaveChangesAsync(stoppingToken);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Unexpected error in OutboxDispatcher");
-                    // В случае непредвиденной ошибки просто продолжаем цикл
-                }
-
-                // Задержка перед следующей проверкой (например, 1 секунда)
-                await Task.Delay(TimeSpan.FromSeconds(1), stoppingToken);
+                await ProcessBatchAsync(stoppingToken);
+            }
+            catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
+            {
+                return;
+            }
+            catch
+            {
+                // намеренно: чтобы HostedService не падал из-за единичной ошибки
             }
         }
     }
 
+    private async Task ProcessBatchAsync(CancellationToken ct)
+    {
+        using var scope = _scopeFactory.CreateScope();
+
+        var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        var notification = scope.ServiceProvider.GetRequiredService<NotificationClient>();
+        var metrics = scope.ServiceProvider.GetRequiredService<IResilienceMetrics>();
+
+        var now = DateTime.UtcNow;
+
+        var messages = await db.OutboxMessages
+            .Where(x => x.Status == OutboxStatus.Pending && x.NextAttemptUtc <= now)
+            .OrderBy(x => x.CreatedAtUtc)
+            .Take(_opt.Value.BatchSize)
+            .ToListAsync(ct);
+
+        foreach (var msg in messages)
+        {
+            try
+            {
+                await SendToNotificationAsync(notification, msg, ct);
+
+                msg.Status = OutboxStatus.Sent;
+
+                metrics.OutboxDispatchResult(OutboxDispatchResult.Sent);
+                metrics.OutboxDispatched();
+            }
+            catch (BrokenCircuitException)
+            {
+                // фиксируем short-circuit по зависимости (требование по метрикам CB) :contentReference[oaicite:8]{index=8}
+                metrics.CircuitBreakerShortCircuit("notificationservice");
+
+                msg.Attempts++;
+                msg.NextAttemptUtc = DateTime.UtcNow.Add(ComputeBackoff(msg.Attempts));
+
+                if (msg.Attempts >= _opt.Value.MaxAttempts)
+                {
+                    msg.Status = OutboxStatus.Failed;
+                    metrics.OutboxDispatchResult(OutboxDispatchResult.Failed);
+                    metrics.OutboxDispatched();
+                }
+            }
+            catch
+            {
+                msg.Attempts++;
+                msg.NextAttemptUtc = DateTime.UtcNow.Add(ComputeBackoff(msg.Attempts));
+
+                if (msg.Attempts >= _opt.Value.MaxAttempts)
+                {
+                    msg.Status = OutboxStatus.Failed;
+                    metrics.OutboxDispatchResult(OutboxDispatchResult.Failed);
+                    metrics.OutboxDispatched();
+                }
+            }
+
+            await db.SaveChangesAsync(ct);
+        }
+    }
+
+    private static Task SendToNotificationAsync(NotificationClient client, OutboxMessage msg, CancellationToken ct) =>
+        msg.OutboxType switch
+        {
+            OutboxType.Magiclink => client.SendMagicLinkAsync(msg.UserId, ct),
+            OutboxType.Receipt => client.SendReceiptAsync(msg.UserId, ct),
+            _ => throw new ArgumentOutOfRangeException(nameof(msg.OutboxType), msg.OutboxType, "Unknown outbox type")
+        };
+
+    private TimeSpan ComputeBackoff(int attempts)
+    {
+        // exp backoff: base * 2^(attempts-1), capped
+        var baseMs = _opt.Value.BackoffBase.TotalMilliseconds;
+        var maxMs = _opt.Value.BackoffMax.TotalMilliseconds;
+
+        var ms = baseMs * Math.Pow(2, Math.Max(0, attempts - 1));
+        ms = Math.Min(ms, maxMs);
+
+        return TimeSpan.FromMilliseconds(ms);
+    }
+
+    private async Task SyncPendingGaugeAtStartup(CancellationToken ct)
+    {
+        using var scope = _scopeFactory.CreateScope();
+
+        var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        var metrics = scope.ServiceProvider.GetRequiredService<IResilienceMetrics>();
+
+        var pending = await db.OutboxMessages.CountAsync(x => x.Status == OutboxStatus.Pending, ct);
+        metrics.OutboxPendingSync(pending);
+    }
 }

@@ -6,8 +6,54 @@
   },
   "servers": [
     {
-      "url": "http://localhost:51205"
+      "url": "http://localhost:60899"
     }
   ],
-  "paths": { }
+  "paths": {
+    "/magic-link": {
+      "post": {
+        "tags": [
+          "OrderService"
+        ],
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "description": "Идентификатор пользователя",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResilienceMetrics"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ResilienceMetrics": {
+        "type": "object"
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "OrderService"
+    }
+  ]
 }

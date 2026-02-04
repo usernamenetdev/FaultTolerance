@@ -10,3 +10,4 @@ C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\G
 C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\refint\Graduation.ServiceDefaults.dll
 C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.pdb
 C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\ref\Graduation.ServiceDefaults.dll
+C:\Users\soswe\Desktop\ВКР\App\Graduation.ServiceDefaults\obj\Debug\net10.0\Graduation.ServiceDefaults.sourcelink.json

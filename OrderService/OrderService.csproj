@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Graduation.ServiceDefaults\Graduation.ServiceDefaults.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Metrics\" />
+  </ItemGroup>
+
 </Project>
