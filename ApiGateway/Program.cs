@@ -67,7 +67,8 @@ builder.Services.AddRateLimiter(options =>
 // YARP reverse proxy (Routes/Clusters из appsettings.json)
 builder.Services
     .AddReverseProxy()
-    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"));
+    .LoadFromConfig(builder.Configuration.GetSection("ReverseProxy"))
+    .AddServiceDiscoveryDestinationResolver();
 
 var app = builder.Build();
 
@@ -89,7 +90,7 @@ app.Use(async (ctx, next) =>
         ctx.Response.StatusCode = StatusCodes.Status400BadRequest;
         await ctx.Response.WriteAsJsonAsync(new
         {
-            error = "Заголовок X-User-Id обязателен и должен быть валидным GUID"
+            error = "Заголовок X-User-Id обязателен"
         });
         return;
     }
@@ -98,11 +99,15 @@ app.Use(async (ctx, next) =>
     await next();
 });
 
+
 // 2) Лимитер ДО проксирования
 app.UseRateLimiter();
 
 // 3) Проксирование + per-user policy
 app.MapReverseProxy()
-   .RequireRateLimiting("per-user");
+    .RequireRateLimiting("per-user");
+
+
+app.MapGet("/ping", () => Results.Ok("pong"));
 
 app.Run();

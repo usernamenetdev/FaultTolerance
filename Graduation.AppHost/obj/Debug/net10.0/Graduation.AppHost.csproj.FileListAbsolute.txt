@@ -139,3 +139,4 @@ C:\Users\soswe\Desktop\ВКР\App\Graduation.AppHost\obj\Debug\net10.0\Graduatio
 C:\Users\soswe\Desktop\ВКР\App\Graduation.AppHost\obj\Debug\net10.0\Graduation.AppHost.genruntimeconfig.cache
 C:\Users\soswe\Desktop\ВКР\App\Graduation.AppHost\obj\Debug\net10.0\ref\Graduation.AppHost.dll
 C:\Users\soswe\Desktop\ВКР\App\Graduation.AppHost\obj\Debug\net10.0\Graduation.AppHost.sourcelink.json
+C:\Users\soswe\Desktop\ВКР\App\Graduation.AppHost\obj\Debug\net10.0\Aspire\references\ReverseProxy.ProjectMetadata.g.cs

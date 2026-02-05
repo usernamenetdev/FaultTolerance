@@ -34,6 +34,14 @@ var order = builder.AddProject<Projects.OrderService>("orderservice")
     .WaitFor(orderDb)
     .WithUrlForEndpoint("http", ep => new() { Url = "/swagger", DisplayText = "Swagger" });
 
+builder.AddProject<Projects.ApiGateway>("apigateway")
+    .WaitFor(order)
+    .WithReference(order);
+
+builder.AddProject<Projects.ReverseProxy>("proxy")
+    .WaitFor(order)
+    .WithReference(order);
+
 if (useToxiproxy)
 {
     notification.
@@ -77,11 +85,5 @@ else
         .WithReference(notification)
         .WithReference(payment);
 }
-
-builder.AddProject<Projects.ApiGateway>("apigateway")
-    .WaitFor(order);
-
-var paymentPort = payment.GetEndpoint("http").EndpointAnnotation.Port;
-var notificationPort = notification.GetEndpoint("http").EndpointAnnotation.Port;
 
 builder.Build().Run();

@@ -17,6 +17,7 @@
     <ProjectReference Include="..\NotificationService\NotificationService.csproj" />
     <ProjectReference Include="..\OrderService\OrderService.csproj" />
     <ProjectReference Include="..\PaymentService\PaymentService.csproj" />
+    <ProjectReference Include="..\ReverseProxy\ReverseProxy.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,5 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
-import exec from 'k6/execution';
 import { Counter } from 'k6/metrics';
 
 const ordersOk = new Counter('orders_ok');
@@ -12,28 +11,18 @@ const magic429 = new Counter('magic_429');
 const magicErr = new Counter('magic_err');
 
 // Настройки через env
-const BASE_URL = __ENV.BASE_URL || 'http://localhost:5178'; // apigateway
+const BASE_URL = __ENV.BASE_URL || 'http://localhost:5032'; // apigateway
 const SLEEP_SEC = __ENV.SLEEP ? Number(__ENV.SLEEP) : 0.1;
 
-// Если твой /orders требует тело — оставь как есть.
-// Если не требует — можно заменить на {}.
 function makeOrderBody() {
-  return JSON.stringify({
-    amount: 100.0,
-    currency: 'USD',
-    fingerprint: 'fp-demo'
-  });
+  return JSON.stringify({});
 }
 
-// Если твой /magic-link требует тело — подставь нужные поля.
-// Если не требует — оставь {}.
 function makeMagicBody() {
   return JSON.stringify({});
 }
 
-// UUID v4 (GUID) генератор без внешних библиотек
 function uuidv4() {
-  // RFC4122-ish; для нагрузки более чем достаточно
   return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
     const r = (Math.random() * 16) | 0;
     const v = c === 'x' ? r : (r & 0x3) | 0x8;

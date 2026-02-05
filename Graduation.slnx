@@ -2,11 +2,7 @@
   <Folder Name="/Элементы решения/">
     <File Path="k6/load.js" />
   </Folder>
-  <Project Path="ApiGateway/ApiGateway.csproj">
-    <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
-  </Project>
   <Project Path="Graduation.AppHost/Graduation.AppHost.csproj">
-    <BuildDependency Project="ApiGateway/ApiGateway.csproj" />
     <BuildDependency Project="NotificationService/NotificationService.csproj" />
     <BuildDependency Project="OrderService/OrderService.csproj" />
     <BuildDependency Project="PaymentService/PaymentService.csproj" />
@@ -21,4 +17,5 @@
   <Project Path="PaymentService/PaymentService.csproj">
     <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
   </Project>
+  <Project Path="ReverseProxy/ReverseProxy.csproj" Id="157edbe4-76c3-4166-a5ef-1f21673e4092" />
 </Solution>

@@ -1,0 +1,6 @@
+@ReverseProxy_HostAddress = http://localhost:5167
+
+GET {{ReverseProxy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
