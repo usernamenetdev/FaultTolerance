@@ -23,8 +23,8 @@ builder.Services.AddRateLimiter(options =>
             partitionKey: "global",
             factory: _ => new TokenBucketRateLimiterOptions
             {
-                TokenLimit = 45,
-                TokensPerPeriod = 45,
+                TokenLimit = 15,
+                TokensPerPeriod = 15,
                 ReplenishmentPeriod = TimeSpan.FromSeconds(1),
                 AutoReplenishment = true,
                 QueueLimit = 0
@@ -45,8 +45,8 @@ builder.Services.AddRateLimiter(options =>
             partitionKey: raw,
             factory: _ => new TokenBucketRateLimiterOptions
             {
-                TokenLimit = 40,
-                TokensPerPeriod = 20,
+                TokenLimit = 5,
+                TokensPerPeriod = 5,
                 ReplenishmentPeriod = TimeSpan.FromSeconds(1),
                 AutoReplenishment = true,
                 QueueLimit = 0

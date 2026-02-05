@@ -34,16 +34,13 @@ export const options = {
             executor: 'ramping-vus',
             startVUs: 1,
             stages: [
-                { duration: '15s', target: 5 },
-                { duration: '15s', target: 10 },
+                { duration: '30s', target: 5 },
                 { duration: '30s', target: 10 },
+                { duration: '60s', target: 10 },
             ],
-            gracefulRampDown: '10s',
+            gracefulRampDown: '15s',
         },
     },
-
-    // Жёсткий потолок RPS, чтобы не убивать стенд (очень помогает)
-    rps: __ENV.RPS ? parseInt(__ENV.RPS, 10) : 50,
 
     discardResponseBodies: true,
 
