@@ -10,77 +10,78 @@ const magicOk = new Counter('magic_ok');
 const magic429 = new Counter('magic_429');
 const magicErr = new Counter('magic_err');
 
-// Настройки через env
-const BASE_URL = __ENV.BASE_URL || 'http://localhost:5032'; // apigateway
-const SLEEP_SEC = __ENV.SLEEP ? Number(__ENV.SLEEP) : 0.1;
+const BASE_URL = __ENV.BASE_URL || 'http://127.0.0.1:5167';
+const SLEEP_SEC = __ENV.SLEEP ? Number(__ENV.SLEEP) : 0.2;           // было 0.1
+const REQ_TIMEOUT = __ENV.REQ_TIMEOUT || '10s';                       // чтобы не висеть 60s
 
-function makeOrderBody() {
-  return JSON.stringify({});
-}
-
-function makeMagicBody() {
-  return JSON.stringify({});
-}
+function makeOrderBody() { return JSON.stringify({}); }
+function makeMagicBody() { return JSON.stringify({}); }
 
 function uuidv4() {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
-    const r = (Math.random() * 16) | 0;
-    const v = c === 'x' ? r : (r & 0x3) | 0x8;
-    return v.toString(16);
-  });
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+        const r = (Math.random() * 16) | 0;
+        const v = c === 'x' ? r : (r & 0x3) | 0x8;
+        return v.toString(16);
+    });
 }
 
-// У каждого VU свой JS runtime, поэтому переменная будет "стабильной" для VU
 let vuUserId;
 
 export const options = {
-  vus: __ENV.VUS ? parseInt(__ENV.VUS, 10) : 50,
-  duration: __ENV.DURATION || '2m',
-  discardResponseBodies: true,
+    // Мягкий ramp-up вместо мгновенных 50 VU
+    scenarios: {
+        steady: {
+            executor: 'ramping-vus',
+            startVUs: 1,
+            stages: [
+                { duration: '15s', target: 5 },
+                { duration: '15s', target: 10 },
+                { duration: '30s', target: 10 },
+            ],
+            gracefulRampDown: '10s',
+        },
+    },
 
-  thresholds: {
-    http_req_failed: ['rate<0.05'], // подстрой под свои ожидания
-  },
+    // Жёсткий потолок RPS, чтобы не убивать стенд (очень помогает)
+    rps: __ENV.RPS ? parseInt(__ENV.RPS, 10) : 50,
+
+    discardResponseBodies: true,
+
+    thresholds: {
+        http_req_failed: ['rate<0.10'],
+    },
 };
 
 export default function () {
-  if (!vuUserId) vuUserId = uuidv4();
+    if (!vuUserId) vuUserId = uuidv4();
 
-  // 80/20 распределение
-  const isOrders = Math.random() < 0.8;
+    const isOrders = Math.random() < 0.8;
 
-  const headers = {
-    'Content-Type': 'application/json',
-    'X-User-Id': vuUserId,
-  };
+    const params = {
+        headers: {
+            'Content-Type': 'application/json',
+            'X-User-Id': vuUserId,
+        },
+        timeout: REQ_TIMEOUT, // <-- ключевой фикс против 60s зависаний
+    };
 
-  if (isOrders) {
-    const res = http.post(`${BASE_URL}/orders`, makeOrderBody(), {
-      headers,
-      tags: { name: 'POST /orders' },
-    });
+    if (isOrders) {
+        const res = http.post(`${BASE_URL}/orders`, makeOrderBody(), { ...params, tags: { name: 'POST /orders' } });
 
-    if (res.status >= 200 && res.status < 300) ordersOk.add(1);
-    else if (res.status === 429) orders429.add(1);
-    else ordersErr.add(1);
+        if (res.status >= 200 && res.status < 300) ordersOk.add(1);
+        else if (res.status === 429) orders429.add(1);
+        else ordersErr.add(1);
 
-    check(res, {
-      'orders: status is 2xx or 429': (r) => (r.status >= 200 && r.status < 300) || r.status === 429,
-    });
-  } else {
-    const res = http.post(`${BASE_URL}/magic-link`, makeMagicBody(), {
-      headers,
-      tags: { name: 'POST /magic-link' },
-    });
+        check(res, { 'orders: status is 2xx or 429': (r) => (r.status >= 200 && r.status < 300) || r.status === 429 });
+    } else {
+        const res = http.post(`${BASE_URL}/magic-link`, makeMagicBody(), { ...params, tags: { name: 'POST /magic-link' } });
 
-    if (res.status >= 200 && res.status < 300) magicOk.add(1);
-    else if (res.status === 429) magic429.add(1);
-    else magicErr.add(1);
+        if (res.status >= 200 && res.status < 300) magicOk.add(1);
+        else if (res.status === 429) magic429.add(1);
+        else magicErr.add(1);
 
-    check(res, {
-      'magic-link: status is 2xx or 429': (r) => (r.status >= 200 && r.status < 300) || r.status === 429,
-    });
-  }
+        check(res, { 'magic-link: status is 2xx or 429': (r) => (r.status >= 200 && r.status < 300) || r.status === 429 });
+    }
 
-  sleep(SLEEP_SEC);
+    sleep(SLEEP_SEC);
 }

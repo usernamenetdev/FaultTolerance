@@ -6,13 +6,7 @@
     "HttpMethod": "POST",
     "IsController": false,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "metrics",
-        "Type": "Graduation.ServiceDefaults.Metrics.ResilienceMetrics",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": [
       {
         "Type": "System.Void",

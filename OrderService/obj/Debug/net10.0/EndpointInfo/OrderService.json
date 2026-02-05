@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:58491"
+      "url": "http://localhost:50807"
     }
   ],
   "paths": {
@@ -49,28 +49,11 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ResilienceMetrics"
-              }
-            }
-          },
-          "required": true
-        },
         "responses": {
           "200": {
             "description": "OK"
           }
         }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "ResilienceMetrics": {
-        "type": "object"
       }
     }
   },

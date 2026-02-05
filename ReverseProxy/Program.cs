@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+using System.Text;
 using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,16 +17,14 @@ builder.Services.AddRateLimiter(options =>
     options.GlobalLimiter = PartitionedRateLimiter.Create<HttpContext, string>(ctx =>
     {
         if (InfraPaths.IsInfra(ctx.Request.Path))
-        {
             return RateLimitPartition.GetNoLimiter("infra");
-        }
 
         return RateLimitPartition.GetTokenBucketLimiter(
             partitionKey: "global",
             factory: _ => new TokenBucketRateLimiterOptions
             {
-                TokenLimit = 200,
-                TokensPerPeriod = 100,
+                TokenLimit = 45,
+                TokensPerPeriod = 45,
                 ReplenishmentPeriod = TimeSpan.FromSeconds(1),
                 AutoReplenishment = true,
                 QueueLimit = 0
@@ -34,25 +34,15 @@ builder.Services.AddRateLimiter(options =>
     // Per-user limiter: ключ = GUID из X-User-Id (в Items кладётся валидатором)
     options.AddPolicy("per-user", ctx =>
     {
-        if (!ctx.Items.TryGetValue(UserContext.ItemKey, out var obj) || obj is not Guid userId)
-        {
-            // На случай некорректного пайплайна — фактически блокируем.
-            return RateLimitPartition.GetTokenBucketLimiter(
-                partitionKey: "invalid-user",
-                factory: _ => new TokenBucketRateLimiterOptions
-                {
-                    TokenLimit = 1,
-                    TokensPerPeriod = 1,
-                    ReplenishmentPeriod = TimeSpan.FromHours(1),
-                    AutoReplenishment = true,
-                    QueueLimit = 0
-                });
-        }
+        if (InfraPaths.IsInfra(ctx.Request.Path))
+            return RateLimitPartition.GetNoLimiter("infra");
 
-        var key = userId.ToString("N");
+        var raw = ctx.Request.Headers["X-User-Id"].ToString();
+        if (string.IsNullOrWhiteSpace(raw))
+            raw = "anonymous";
 
         return RateLimitPartition.GetTokenBucketLimiter(
-            partitionKey: key,
+            partitionKey: raw,
             factory: _ => new TokenBucketRateLimiterOptions
             {
                 TokenLimit = 40,
@@ -82,4 +72,3 @@ app.MapReverseProxy()
     .RequireRateLimiting("per-user");
 
 app.Run();
-

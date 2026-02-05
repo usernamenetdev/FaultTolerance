@@ -34,10 +34,6 @@ var order = builder.AddProject<Projects.OrderService>("orderservice")
     .WaitFor(orderDb)
     .WithUrlForEndpoint("http", ep => new() { Url = "/swagger", DisplayText = "Swagger" });
 
-builder.AddProject<Projects.ApiGateway>("apigateway")
-    .WaitFor(order)
-    .WithReference(order);
-
 builder.AddProject<Projects.ReverseProxy>("proxy")
     .WaitFor(order)
     .WithReference(order);

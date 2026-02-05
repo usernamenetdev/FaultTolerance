@@ -33,15 +33,15 @@ builder.Services.AddHttpClient<PaymentClient>("PaymentClient", client =>
 {
     options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
 
-    options.Retry.MaxRetryAttempts = 3;
-    options.Retry.Delay = TimeSpan.FromMilliseconds(200);
+    options.Retry.MaxRetryAttempts = 2;
+    options.Retry.Delay = TimeSpan.FromMilliseconds(100);
     options.Retry.BackoffType = DelayBackoffType.Exponential;
     options.Retry.UseJitter = true;
 
     options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(10);
-    options.CircuitBreaker.MinimumThroughput = 10;
-    options.CircuitBreaker.FailureRatio = 0.5;
-    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(15);
+    options.CircuitBreaker.MinimumThroughput = 50;
+    options.CircuitBreaker.FailureRatio = 0.3;
+    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(8);
 });
 
 builder.Services.AddHttpClient<NotificationClient>("NotificationClient", client =>
@@ -53,17 +53,17 @@ builder.Services.AddHttpClient<NotificationClient>("NotificationClient", client 
 {
     options.AttemptTimeout.Timeout = TimeSpan.FromSeconds(5);
 
-    options.Retry.MaxRetryAttempts = 3;
-    options.Retry.Delay = TimeSpan.FromMilliseconds(200);
+    options.Retry.MaxRetryAttempts = 2;
+    options.Retry.Delay = TimeSpan.FromMilliseconds(100);
     options.Retry.BackoffType = DelayBackoffType.Exponential;
     options.Retry.UseJitter = true;
 
     options.Retry.DisableForUnsafeHttpMethods();
 
     options.CircuitBreaker.SamplingDuration = TimeSpan.FromSeconds(10);
-    options.CircuitBreaker.MinimumThroughput = 10;
-    options.CircuitBreaker.FailureRatio = 0.5;
-    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(15);
+    options.CircuitBreaker.MinimumThroughput = 50;
+    options.CircuitBreaker.FailureRatio = 0.3;
+    options.CircuitBreaker.BreakDuration = TimeSpan.FromSeconds(8);
 });
 
 builder.Services.AddHostedService<OutboxDispatcherHostedService>();
@@ -119,7 +119,7 @@ app.MapPost("/orders", async Task<IResult> (
 app.MapPost("/magic-link", async Task<IResult> (
     HttpContext http,
     OutboxService svc,
-    ResilienceMetrics metrics,
+    IResilienceMetrics metrics,
     CancellationToken ct) =>
 {
     var userId = http.Request.Headers["X-User-Id"].ToString();

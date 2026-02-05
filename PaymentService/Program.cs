@@ -1,4 +1,5 @@
 ﻿using Graduation.ServiceDefaults.Metrics;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
 using PaymentService.Contracts;

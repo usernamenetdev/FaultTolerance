@@ -13,11 +13,13 @@ namespace PaymentService.Domain
     {
         private readonly PaymentDbContext _db;
         private readonly IResilienceMetrics _metrics;
+        private readonly CancellationToken _appStopping;
 
-        public PaymentApplicationService(PaymentDbContext db, IResilienceMetrics metrics)
+        public PaymentApplicationService(PaymentDbContext db, IResilienceMetrics metrics, IHostApplicationLifetime lifetime)
         {
             _db = db;
             _metrics = metrics;
+            _appStopping = lifetime.ApplicationStopping;
         }
 
         public async Task<IResult> CreatePaymentAsync(
@@ -25,6 +27,11 @@ namespace PaymentService.Domain
             CreatePaymentRequest req,
             CancellationToken ct)
         {
+
+            using var dbCts = CancellationTokenSource.CreateLinkedTokenSource(_appStopping);
+            dbCts.CancelAfter(TimeSpan.FromSeconds(2));  // внутренний дедлайн БД
+            var dbCt = dbCts.Token;
+
             var now = DateTime.UtcNow;
 
             req = req with
@@ -56,7 +63,7 @@ namespace PaymentService.Domain
 
             try
             {
-                await _db.SaveChangesAsync(ct); // ключ успешно "захвачен"
+                await SaveChangesCriticalAsync(dbCt);
 
                 // ✅ idempotency MISS: ключ новый, обработка будет выполняться
                 _metrics.RecordIdempotencyResult("payment_create", IdempotencyResult.Miss);
@@ -127,7 +134,7 @@ namespace PaymentService.Domain
 
             try
             {
-                await _db.SaveChangesAsync(ct);
+                await SaveChangesCriticalAsync(dbCt);
             }
             catch (DbUpdateException ex) when (IsUniqueViolation(ex))
             {
@@ -142,7 +149,7 @@ namespace PaymentService.Domain
 
                 _db.Entry(payment).State = EntityState.Detached;
 
-                await _db.SaveChangesAsync(ct);
+                await SaveChangesCriticalAsync(dbCt);
 
                 return Results.Conflict(new
                 {
@@ -186,7 +193,7 @@ namespace PaymentService.Domain
                 idem.ResultError = e.GetType().Name;
             }
 
-            await _db.SaveChangesAsync(ct);
+            await SaveChangesCriticalAsync(dbCt);
 
             return Results.Ok(new
             {
@@ -211,5 +218,23 @@ namespace PaymentService.Domain
 
         private static bool IsUniqueViolation(DbUpdateException ex)
             => ex.InnerException is SqlException sql && (sql.Number == 2627 || sql.Number == 2601);
+
+        private async Task SaveChangesCriticalAsync(CancellationToken requestCt)
+        {
+            try
+            {
+                // Если клиент ещё жив — ок, сохраняем с request ct
+                await _db.SaveChangesAsync(requestCt);
+            }
+            catch (OperationCanceledException) when (requestCt.IsCancellationRequested && !_appStopping.IsCancellationRequested)
+            {
+                // Клиент/прокси отменил запрос, но сервис ещё жив.
+                // Сохранение финального состояния в БД.
+                using var cts = CancellationTokenSource.CreateLinkedTokenSource(_appStopping);
+                cts.CancelAfter(TimeSpan.FromSeconds(2)); // коротко, чтобы не залипнуть
+
+                await _db.SaveChangesAsync(cts.Token);
+            }
+        }
     }
 }

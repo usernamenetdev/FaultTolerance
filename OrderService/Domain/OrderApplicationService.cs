@@ -34,7 +34,7 @@ namespace OrderService.Domain
                 PaymentStatus = PaymentStatus.Unknown
             };
             _db.Orders.Add(order);
-            await _db.SaveChangesAsync(ct);
+            await _db.SaveChangesAsync();
 
             try
             {
@@ -81,7 +81,7 @@ namespace OrderService.Domain
                 order.FailureReason = $"Ошибка при обработке платежа: {ex.Message}";
             }
 
-            await _db.SaveChangesAsync(ct);
+            await _db.SaveChangesAsync();
 
             return order;
         }
