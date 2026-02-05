@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Элементы решения/">
+    <File Path="k6/load.js" />
+  </Folder>
   <Project Path="ApiGateway/ApiGateway.csproj">
     <BuildDependency Project="Graduation.ServiceDefaults/Graduation.ServiceDefaults.csproj" />
   </Project>

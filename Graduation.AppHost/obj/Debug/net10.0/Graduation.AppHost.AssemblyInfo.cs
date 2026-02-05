@@ -26,7 +26,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Graduation.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb83c12b5fc71b288a07bc8cab6c0b8580e1f28d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39b9c9ccc0f9e2882802ba60315d9003b0a504d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Graduation.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Graduation.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

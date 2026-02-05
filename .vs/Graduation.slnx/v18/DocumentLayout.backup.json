@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\graduation.apphost\\toxiproxyconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|solutionrelative:graduation.apphost\\toxiproxyconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\graduation.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\graduation.apphost\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|solutionrelative:graduation.apphost\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\paymentservice\\data\\configurations\\paymentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -115,10 +123,6 @@
       "RelativeMoniker": "D:0:0:{0AE89CA6-395E-D97B-B286-1462BB113FF2}|Graduation.ServiceDefaults\\Graduation.ServiceDefaults.csproj|solutionrelative:graduation.servicedefaults\\metrics\\iresiliencemetrics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\orderservice.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0AE89CA6-395E-D97B-B286-1462BB113FF2}|Graduation.ServiceDefaults\\Graduation.ServiceDefaults.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\graduation.servicedefaults\\metrics\\metricsservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AE89CA6-395E-D97B-B286-1462BB113FF2}|Graduation.ServiceDefaults\\Graduation.ServiceDefaults.csproj|solutionrelative:graduation.servicedefaults\\metrics\\metricsservicecollectionextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -202,24 +206,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Program.cs",
-              "RelativeDocumentMoniker": "PaymentService\\Program.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Program.cs",
-              "RelativeToolTip": "PaymentService\\Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAUwCMAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ToxiProxyConfigurator.cs",
+              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "RelativeDocumentMoniker": "Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "RelativeToolTip": "Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAApwFMAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-04T09:09:43.117Z",
+              "WhenOpened": "2026-02-05T01:40:46.704Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "PaymentStatusResponse.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Contracts\\PaymentStatusResponse.cs",
               "RelativeDocumentMoniker": "PaymentService\\Contracts\\PaymentStatusResponse.cs",
@@ -232,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "PaymentConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Data\\Configurations\\PaymentConfiguration.cs",
               "RelativeDocumentMoniker": "PaymentService\\Data\\Configurations\\PaymentConfiguration.cs",
@@ -245,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "PaymentIdempotencyConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Data\\Configurations\\PaymentIdempotencyConfiguration.cs",
               "RelativeDocumentMoniker": "PaymentService\\Data\\Configurations\\PaymentIdempotencyConfiguration.cs",
@@ -277,27 +281,53 @@
               "RelativeDocumentMoniker": "Graduation.AppHost\\AppHost.cs",
               "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\AppHost.cs",
               "RelativeToolTip": "Graduation.AppHost\\AppHost.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAwwDUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T09:00:58.872Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Program.cs",
               "RelativeDocumentMoniker": "OrderService\\Program.cs",
               "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Program.cs",
               "RelativeToolTip": "OrderService\\Program.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAUwDEAAABCAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAUwF4AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-04T09:09:40.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
+              "Title": "OrderService.csproj",
+              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\OrderService.csproj",
+              "RelativeDocumentMoniker": "OrderService\\OrderService.csproj",
+              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\OrderService.csproj",
+              "RelativeToolTip": "OrderService\\OrderService.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-04T12:44:00.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Program.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Program.cs",
+              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Program.cs",
+              "RelativeToolTip": "PaymentService\\Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAUwCMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-04T09:09:43.117Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\Payment.cs",
               "RelativeDocumentMoniker": "PaymentService\\Domain\\Payment.cs",
@@ -310,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\PaymentService.cs",
               "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentService.cs",
@@ -323,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "CreatePaymentRequest.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Contracts\\CreatePaymentRequest.cs",
               "RelativeDocumentMoniker": "PaymentService\\Contracts\\CreatePaymentRequest.cs",
@@ -336,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "PaymentRequest.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Contracts\\PaymentRequest.cs",
               "RelativeDocumentMoniker": "OrderService\\Contracts\\PaymentRequest.cs",
@@ -349,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "OrderApplicationService.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\OrderApplicationService.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\OrderApplicationService.cs",
@@ -362,7 +392,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "PaymentResponse.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Contracts\\PaymentResponse.cs",
               "RelativeDocumentMoniker": "OrderService\\Contracts\\PaymentResponse.cs",
@@ -375,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "OrderConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Data\\Configurations\\OrderConfiguration.cs",
               "RelativeDocumentMoniker": "OrderService\\Data\\Configurations\\OrderConfiguration.cs",
@@ -388,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\Order.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\Order.cs",
@@ -401,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Helpers.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Helpers.cs",
               "RelativeDocumentMoniker": "OrderService\\Helpers.cs",
@@ -414,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "CreateOrderRequest.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Contracts\\CreateOrderRequest.cs",
               "RelativeDocumentMoniker": "OrderService\\Contracts\\CreateOrderRequest.cs",
@@ -427,7 +457,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "PaymentClient.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Infrastructure\\PaymentClient.cs",
               "RelativeDocumentMoniker": "OrderService\\Infrastructure\\PaymentClient.cs",
@@ -440,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "OutboxService.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\OutboxService.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxService.cs",
@@ -453,7 +483,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "OutboxMessage.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\OutboxMessage.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxMessage.cs",
@@ -466,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "PaymentService.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\PaymentService.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\PaymentService.cs",
@@ -479,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "DeliverRequest.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Contracts\\DeliverRequest.cs",
               "RelativeDocumentMoniker": "OrderService\\Contracts\\DeliverRequest.cs",
@@ -492,7 +522,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 24,
               "Title": "PaymentStatus.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\PaymentStatus.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\PaymentStatus.cs",
@@ -505,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "OutboxType.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\OutboxType.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxType.cs",
@@ -518,7 +548,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 26,
               "Title": "OutboxDispatcherHostedService.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\BackgroundServices\\OutboxDispatcherHostedService.cs",
               "RelativeDocumentMoniker": "OrderService\\BackgroundServices\\OutboxDispatcherHostedService.cs",
@@ -531,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 27,
               "Title": "OutboxStatus.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Domain\\OutboxStatus.cs",
               "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxStatus.cs",
@@ -544,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "MetricsServiceCollectionExtensions.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.ServiceDefaults\\Metrics\\MetricsServiceCollectionExtensions.cs",
               "RelativeDocumentMoniker": "Graduation.ServiceDefaults\\Metrics\\MetricsServiceCollectionExtensions.cs",
@@ -557,7 +587,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 29,
               "Title": "IResilienceMetrics.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.ServiceDefaults\\Metrics\\IResilienceMetrics.cs",
               "RelativeDocumentMoniker": "Graduation.ServiceDefaults\\Metrics\\IResilienceMetrics.cs",
@@ -571,19 +601,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "OrderService.csproj",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\OrderService.csproj",
-              "RelativeDocumentMoniker": "OrderService\\OrderService.csproj",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\OrderService.csproj",
-              "RelativeToolTip": "OrderService\\OrderService.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-04T12:44:00.338Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
               "Title": "ResilienceMetrics.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.ServiceDefaults\\Metrics\\ResilienceMetrics.cs",
               "RelativeDocumentMoniker": "Graduation.ServiceDefaults\\Metrics\\ResilienceMetrics.cs",
@@ -596,7 +613,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "PaymentDbContext.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Data\\PaymentDbContext.cs",
               "RelativeDocumentMoniker": "PaymentService\\Data\\PaymentDbContext.cs",
@@ -609,7 +626,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "OrderDbContext.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Data\\OrderDbContext.cs",
               "RelativeDocumentMoniker": "OrderService\\Data\\OrderDbContext.cs",
@@ -622,7 +639,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "OutboxMessageConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Data\\Configurations\\OutboxMessageConfiguration.cs",
               "RelativeDocumentMoniker": "OrderService\\Data\\Configurations\\OutboxMessageConfiguration.cs",
@@ -635,7 +652,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\appsettings.json",
               "RelativeDocumentMoniker": "OrderService\\appsettings.json",
@@ -648,7 +665,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "NotificationClient.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Infrastructure\\NotificationClient.cs",
               "RelativeDocumentMoniker": "OrderService\\Infrastructure\\NotificationClient.cs",
@@ -661,7 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "PaymentStatus.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\PaymentStatus.cs",
               "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentStatus.cs",
@@ -674,7 +691,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "IdempotencyStatus.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\IdempotencyStatus.cs",
               "RelativeDocumentMoniker": "PaymentService\\Domain\\IdempotencyStatus.cs",
@@ -687,7 +704,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "PaymentIdempotency.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\PaymentIdempotency.cs",
               "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentIdempotency.cs",
@@ -700,7 +717,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "NotificationService\\Program.cs",
@@ -712,7 +729,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ApiGateway\\Program.cs",
               "RelativeDocumentMoniker": "ApiGateway\\Program.cs",
@@ -724,7 +741,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "UserContext.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ApiGateway\\Helpers\\UserContext.cs",
               "RelativeDocumentMoniker": "ApiGateway\\Helpers\\UserContext.cs",
@@ -736,7 +753,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "Extensions.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.ServiceDefaults\\Extensions.cs",
               "RelativeDocumentMoniker": "Graduation.ServiceDefaults\\Extensions.cs",
@@ -748,7 +765,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "PaymentService.csproj",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\PaymentService.csproj",
               "RelativeDocumentMoniker": "PaymentService\\PaymentService.csproj",
@@ -760,7 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "PaymentService.http",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\PaymentService.http",
               "RelativeDocumentMoniker": "PaymentService\\PaymentService.http",
@@ -772,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 46,
               "Title": "InfraPaths.cs",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ApiGateway\\Helpers\\InfraPaths.cs",
               "RelativeDocumentMoniker": "ApiGateway\\Helpers\\InfraPaths.cs",
@@ -784,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 45,
               "Title": "ApiGateway.http",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ApiGateway\\ApiGateway.http",
               "RelativeDocumentMoniker": "ApiGateway\\ApiGateway.http",
@@ -796,7 +813,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 47,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ApiGateway\\appsettings.json",
               "RelativeDocumentMoniker": "ApiGateway\\appsettings.json",
@@ -808,7 +825,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 48,
               "Title": "Graduation.AppHost.csproj",
               "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\Graduation.AppHost.csproj",
               "RelativeDocumentMoniker": "Graduation.AppHost\\Graduation.AppHost.csproj",
