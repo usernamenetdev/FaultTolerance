@@ -6,10 +6,33 @@
   },
   "servers": [
     {
-      "url": "http://localhost:60899"
+      "url": "http://localhost:54851"
     }
   ],
   "paths": {
+    "/orders": {
+      "post": {
+        "tags": [
+          "OrderService"
+        ],
+        "parameters": [
+          {
+            "name": "X-User-Id",
+            "in": "header",
+            "description": "Идентификатор пользователя",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/magic-link": {
       "post": {
         "tags": [

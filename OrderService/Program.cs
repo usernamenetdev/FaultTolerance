@@ -2,7 +2,9 @@ using Graduation.ServiceDefaults.Metrics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Http.Resilience;
 using Microsoft.OpenApi;
+using OrderService;
 using OrderService.Application;
+using OrderService.Contracts;
 using OrderService.Data;
 using OrderService.Domain;
 using OrderService.Infrastructure;
@@ -19,7 +21,7 @@ builder.AddSqlServerDbContext<OrderDbContext>(connectionName: "orderdb");
 builder.Services.Configure<OutboxDispatcherOptions>(builder.Configuration.GetSection("Outbox"));
 
 builder.Services.AddScoped<OutboxService>();
-builder.Services.AddScoped<PaymentService>();
+builder.Services.AddScoped<OrderApplicationService>();
 builder.Services.AddResilienceMetrics();
 
 builder.Services.AddHttpClient<PaymentClient>("PaymentClient", client =>
@@ -46,8 +48,6 @@ builder.Services.AddHttpClient<NotificationClient>("NotificationClient", client 
 {
     client.BaseAddress = new(builder.Configuration["Services:NotificationBaseUrl"]
                                  ?? "http://notificationservice");
-
-    var a = 0;
 })
 .AddStandardResilienceHandler(options =>
 {
@@ -87,36 +87,34 @@ using (var scope = app.Services.CreateScope())
     db.Database.Migrate();
 }
 
-/*
-app.MapPost("/orders", async (
-    HttpRequest http,
-    CreateOrderRequest request,
+app.MapPost("/orders", async Task<IResult> (
+    HttpContext http,
     OrderApplicationService orderService,
     CancellationToken ct) =>
 {
-    // Проверяем наличие заголовка идемпотентности
-    if (!http.Headers.TryGetValue("Idempotency-Key", out var key) || string.IsNullOrWhiteSpace(key))
-        return Results.BadRequest(new { error = "MissingIdempotencyKey" });
-    if (!Guid.TryParse(key.ToString(), out var idempotencyKey))
-        return Results.BadRequest(new { error = "InvalidIdempotencyKey" });
+    var userId = http.Request.Headers["X-User-Id"].ToString();
+    if (string.IsNullOrWhiteSpace(userId))
+        return Results.BadRequest(new { error = "Отсутствует X-User-Id" });
 
     // Вызываем бизнес-логику создания заказа
-    return await orderService.CreateOrderAsync(idempotencyKey, request, ct);
+    var order = await orderService.CreateOrderAsync(userId, 15, "RUB", Helpers.RandomString(), ct);
+
+    return Results.Created("/", order);
 })
-.AddOpenApiOperationTransformer((operation, ctx) => {
+.AddOpenApiOperationTransformer((operation, ctx, ct) => {
     // Описание параметра Idempotency-Key для OpenAPI (аналогично PaymentService)
     operation.Parameters ??= new List<IOpenApiParameter>();
     operation.Parameters.Add(new OpenApiParameter
     {
-        Name = "Idempotency-Key",
+        Name = "X-User-Id",
         In = ParameterLocation.Header,
         Required = true,
-        Description = "Ключ идемпотентности. Повторный запрос с тем же ключом не дублирует заказ.",
+        Description = "Идентификатор пользователя",
         Schema = new OpenApiSchema { Type = JsonSchemaType.String }
     });
     return Task.CompletedTask;
 });
-*/
+
 
 app.MapPost("/magic-link", async Task<IResult> (
     HttpContext http,

@@ -18,14 +18,13 @@ public sealed class OrderConfiguration : IEntityTypeConfiguration<Order>
         b.Property(x => x.UserId)
             .IsRequired();
 
-        b.Property(x => x.Status)
+        b.Property(x => x.PaymentStatus)
             .HasConversion<int>()
             .IsRequired()
-            .HasDefaultValue(OrderStatus.Unknown);
+            .HasDefaultValue(PaymentStatus.Unknown);
 
         b.Property(x => x.FailureReason)
-            .HasMaxLength(256)
-            .IsUnicode(false);
+            .HasColumnType("nvarchar(max)");
 
         b.Property(x => x.PaymentId)
             .IsRequired(false);
@@ -40,7 +39,7 @@ public sealed class OrderConfiguration : IEntityTypeConfiguration<Order>
             .IsRequired(false);
 
         b.HasIndex(x => x.UserId);
-        b.HasIndex(x => x.Status);
+        b.HasIndex(x => x.PaymentStatus);
         b.HasIndex(x => x.PaymentId);
     }
 }

@@ -2,7 +2,7 @@
 {
     public sealed record CreatePaymentRequest(
          Guid OrderId,
-         Guid UserId,
+         string UserId,
          decimal Amount,
          string Currency,
          string Fingerprint

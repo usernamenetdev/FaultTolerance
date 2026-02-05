@@ -200,7 +200,7 @@ namespace PaymentService.Domain
         {
             var s = string.Join('|',
                 req.OrderId.ToString("N"),
-                req.UserId.ToString("N"),
+                req.UserId,
                 req.Amount.ToString("0.00", CultureInfo.InvariantCulture),
                 req.Currency.Trim().ToUpperInvariant(),
                 req.Fingerprint.Trim());

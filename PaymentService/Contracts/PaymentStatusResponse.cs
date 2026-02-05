@@ -3,7 +3,7 @@
     public sealed record PaymentStatusResponse(
         Guid PaymentId,
         Guid OrderId,
-        Guid UserId,
+        string? UserId,
         decimal Amount,
         string Currency,
         string Fingerprint,

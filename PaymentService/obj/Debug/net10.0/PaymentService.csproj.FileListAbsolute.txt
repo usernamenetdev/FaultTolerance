@@ -183,5 +183,5 @@ C:\Users\soswe\Desktop\ВКР\App\PaymentService\bin\Debug\net10.0\runtimes\win-
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\bin\Debug\net10.0\Aspire.Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\bin\Debug\net10.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
-C:\Users\soswe\Desktop\ВКР\App\PaymentService\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\obj\Debug\net10.0\PaymentService.sourcelink.json
+C:\Users\soswe\Desktop\ВКР\App\PaymentService\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

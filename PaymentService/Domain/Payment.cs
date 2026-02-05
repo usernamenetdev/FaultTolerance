@@ -4,7 +4,7 @@ public sealed class Payment
 {
     public Guid Id { get; set; }
     public Guid OrderId { get; set; }
-    public Guid UserId { get; set; }
+    public string? UserId { get; set; }
 
     public decimal Amount { get; set; }
     public string Currency { get; set; } = "RUB";

@@ -1,8 +1,8 @@
 ﻿namespace OrderService.Domain
 {
-    public enum OutboxType : byte
-    {
-        Magiclink = 0,
-        Receipt = 1
-    }
+        public enum OutboxType : byte
+        {
+            Magiclink = 0,
+            Receipt = 1
+        }
 }

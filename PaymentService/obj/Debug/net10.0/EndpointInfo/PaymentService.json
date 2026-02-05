@@ -6,7 +6,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:60889"
+      "url": "http://localhost:56777"
     }
   ],
   "paths": {
@@ -86,8 +86,7 @@
             "format": "uuid"
           },
           "userId": {
-            "type": "string",
-            "format": "uuid"
+            "type": "string"
           },
           "amount": {
             "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
