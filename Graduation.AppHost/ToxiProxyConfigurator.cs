@@ -26,9 +26,7 @@ namespace Graduation.AppHost
         public int NotificationProxyListenPort { get; set; } = 9101;
 
         /// <summary>
-        /// Хост для upstream, ВАЖНО:
-        /// - если toxiproxy в контейнере, а сервисы на хосте: обычно "host.docker.internal" (Windows/Mac)
-        /// - если toxiproxy тоже на хосте: "localhost"
+        /// Хост для upstream
         /// </summary>
         public string UpstreamHost { get; set; } = "host.docker.internal";
 
@@ -49,7 +47,7 @@ namespace Graduation.AppHost
         public TimeSpan ReadyDelay { get; set; } = TimeSpan.FromMilliseconds(200);
 
         /// <summary>
-        /// Если true — падать при ошибке конфигурации (обычно правильно для режима fault-injection).
+        /// Если true — падать при ошибке конфигурации.
         /// </summary>
         public bool FailFastOnError { get; set; } = true;
     }
@@ -121,7 +119,7 @@ namespace Graduation.AppHost
                         reset.EnsureSuccessStatusCode();
                     }
 
-                    // /populate принимает JSON-массив прокси; безопасно вызывать на старте много раз.
+                    // /populate принимает JSON-массив прокси.
                     var payload = new[]
                     {
                     new ProxySpec(

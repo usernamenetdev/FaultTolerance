@@ -185,3 +185,6 @@ C:\Users\soswe\Desktop\ВКР\App\PaymentService\bin\Debug\net10.0\Aspire.Micros
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\bin\Debug\net10.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\obj\Debug\net10.0\PaymentService.sourcelink.json
 C:\Users\soswe\Desktop\ВКР\App\PaymentService\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+E:\Graduation\PaymentService\obj\Debug\net10.0\PaymentService.dll
+E:\Graduation\PaymentService\obj\Debug\net10.0\refint\PaymentService.dll
+E:\Graduation\PaymentService\obj\Debug\net10.0\PaymentService.pdb

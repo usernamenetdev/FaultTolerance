@@ -61,15 +61,14 @@ if (useToxiproxy)
     notification,
     new ToxiProxyConfiguratorOptions
     {
-        // если toxiproxy у тебя контейнер, а сервисы на хосте — оставляй host.docker.internal
-        // если toxiproxy тоже на хосте — поставь "localhost"
+        // toxiproxy контейнер
         UpstreamHost = "host.docker.internal",
 
         PaymentProxyListenPort = 9102,
         NotificationProxyListenPort = 9101,
         AdminBaseAddress = new Uri("http://localhost:8474/"),
 
-        // рекомендую, чтобы при каждом запуске токсики были выключены
+        // чтобы при каждом запуске токсики были выключены
         ResetOnStart = true
     });
 }

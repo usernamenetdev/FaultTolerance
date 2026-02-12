@@ -58,3 +58,6 @@ C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Graduati
 C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Graduation.ServiceDefaults.pdb
 C:\Users\soswe\Desktop\ВКР\App\NotificationService\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\soswe\Desktop\ВКР\App\NotificationService\obj\Debug\net10.0\NotificationService.sourcelink.json
+E:\Graduation\NotificationService\obj\Debug\net10.0\NotificationService.dll
+E:\Graduation\NotificationService\obj\Debug\net10.0\refint\NotificationService.dll
+E:\Graduation\NotificationService\obj\Debug\net10.0\NotificationService.pdb

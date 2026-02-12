@@ -1,46 +1,166 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\",
+  "WorkspaceRootPath": "E:\\Graduation\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0692DFCB-E756-413E-95EA-FF592D21B284}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{0692DFCB-E756-413E-95EA-FF592D21B284}|C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\k6\\load.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{0692DFCB-E756-413E-95EA-FF592D21B284}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{0692DFCB-E756-413E-95EA-FF592D21B284}|solutionrelative:k6\\load.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\paymentservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\reverseproxy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|solutionrelative:reverseproxy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\graduation.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|e:\\graduation\\graduation.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|solutionrelative:graduation.apphost\\apphost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\paymentservice\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\reverseproxy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|solutionrelative:reverseproxy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\graduation.apphost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|solutionrelative:graduation.apphost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\reverseproxy\\helpers\\infrapaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|e:\\graduation\\reverseproxy\\helpers\\infrapaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|solutionrelative:reverseproxy\\helpers\\infrapaths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|c:\\users\\soswe\\desktop\\\u0432\u043A\u0440\\app\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|e:\\graduation\\reverseproxy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|solutionrelative:reverseproxy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\domain\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\domain\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\domain\\paymentidempotency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\domain\\paymentidempotency.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\domain\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\domain\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\domain\\idempotencystatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\domain\\idempotencystatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\data\\configurations\\paymentidempotencyconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\data\\configurations\\paymentidempotencyconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\data\\paymentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\data\\paymentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\data\\configurations\\paymentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\data\\configurations\\paymentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\contracts\\paymentstatusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\contracts\\paymentstatusresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|e:\\graduation\\paymentservice\\contracts\\createpaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DDA886F-7022-E231-A5D2-8BDF0FBB44D6}|PaymentService\\PaymentService.csproj|solutionrelative:paymentservice\\contracts\\createpaymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\helpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\infrastructure\\paymentclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\infrastructure\\paymentclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\infrastructure\\notificationclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\infrastructure\\notificationclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\paymentstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\outboxtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\outboxtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\outboxstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\outboxstatus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\outboxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\outboxservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\outboxmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\outboxmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\orderapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\orderapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\domain\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\domain\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\data\\orderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\orderdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\data\\configurations\\outboxmessageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\configurations\\outboxmessageconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\data\\configurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\data\\configurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\contracts\\paymentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\contracts\\paymentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\contracts\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\contracts\\paymentrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\contracts\\deliverrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\contracts\\deliverrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\contracts\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\contracts\\createorderrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|e:\\graduation\\orderservice\\backgroundservices\\outboxdispatcherhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6BCC5D4C-DCFD-F350-0302-6CEEC93FCB6D}|OrderService\\OrderService.csproj|solutionrelative:orderservice\\backgroundservices\\outboxdispatcherhostedservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|e:\\graduation\\notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CF9FD0F0-B9C2-54C6-189B-77AA3D46F4C2}|NotificationService\\NotificationService.csproj|solutionrelative:notificationservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AE89CA6-395E-D97B-B286-1462BB113FF2}|Graduation.ServiceDefaults\\Graduation.ServiceDefaults.csproj|e:\\graduation\\graduation.servicedefaults\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AE89CA6-395E-D97B-B286-1462BB113FF2}|Graduation.ServiceDefaults\\Graduation.ServiceDefaults.csproj|solutionrelative:graduation.servicedefaults\\extensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48F5E42B-220B-06E1-EF7D-634A1588BC5E}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{48F5E42B-220B-06E1-EF7D-634A1588BC5E}|E:\\Graduation\\k6\\load.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{48F5E42B-220B-06E1-EF7D-634A1588BC5E}|\u042D\u043B\u0435\u043C\u0435\u043D\u0442\u044B \u0440\u0435\u0448\u0435\u043D\u0438\u044F{48F5E42B-220B-06E1-EF7D-634A1588BC5E}|solutionrelative:k6\\load.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|e:\\graduation\\graduation.apphost\\toxiproxyconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|solutionrelative:graduation.apphost\\toxiproxyconfigurator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|e:\\graduation\\reverseproxy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{157EDBE4-76C3-4166-A5EF-1F21673E4092}|ReverseProxy\\ReverseProxy.csproj|solutionrelative:reverseproxy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|e:\\graduation\\graduation.apphost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F5BBF901-DF84-04A1-156C-A91E4008A828}|Graduation.AppHost\\Graduation.AppHost.csproj|solutionrelative:graduation.apphost\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,141 +170,533 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PaymentService.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\PaymentService.cs",
-              "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentService.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Domain\\PaymentService.cs",
-              "RelativeToolTip": "PaymentService\\Domain\\PaymentService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAANwAAABDAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Domain\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentStatus.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Domain\\PaymentStatus.cs",
+              "RelativeToolTip": "PaymentService\\Domain\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T04:35:13.983Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Program.cs",
-              "RelativeDocumentMoniker": "OrderService\\Program.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\OrderService\\Program.cs",
-              "RelativeToolTip": "OrderService\\Program.cs",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAwwDQAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T04:16:38.969Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "InfraPaths.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ReverseProxy\\Helpers\\InfraPaths.cs",
-              "RelativeDocumentMoniker": "ReverseProxy\\Helpers\\InfraPaths.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ReverseProxy\\Helpers\\InfraPaths.cs",
-              "RelativeToolTip": "ReverseProxy\\Helpers\\InfraPaths.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T03:44:01.251Z",
+              "WhenOpened": "2026-02-12T01:57:28.177Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ReverseProxy\\appsettings.json",
-              "RelativeDocumentMoniker": "ReverseProxy\\appsettings.json",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ReverseProxy\\appsettings.json",
-              "RelativeToolTip": "ReverseProxy\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-05T03:50:27.994Z",
+              "Title": "PaymentIdempotency.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Domain\\PaymentIdempotency.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentIdempotency.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Domain\\PaymentIdempotency.cs",
+              "RelativeToolTip": "PaymentService\\Domain\\PaymentIdempotency.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:22.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Domain\\Payment.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Domain\\Payment.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Domain\\Payment.cs",
+              "RelativeToolTip": "PaymentService\\Domain\\Payment.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:19.716Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ReverseProxy\\Program.cs",
-              "RelativeDocumentMoniker": "ReverseProxy\\Program.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\ReverseProxy\\Program.cs",
-              "RelativeToolTip": "ReverseProxy\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T03:41:15.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\appsettings.json",
-              "RelativeDocumentMoniker": "Graduation.AppHost\\appsettings.json",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\appsettings.json",
-              "RelativeToolTip": "Graduation.AppHost\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-05T03:51:54.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AppHost.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\AppHost.cs",
-              "RelativeDocumentMoniker": "Graduation.AppHost\\AppHost.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\Graduation.AppHost\\AppHost.cs",
-              "RelativeToolTip": "Graduation.AppHost\\AppHost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-05T03:40:07.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "load.js",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\k6\\load.js",
-              "RelativeDocumentMoniker": "k6\\load.js",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\k6\\load.js",
-              "RelativeToolTip": "k6\\load.js",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowA4AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-02-05T04:00:19.938Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Program.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Program.cs",
               "RelativeDocumentMoniker": "PaymentService\\Program.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\PaymentService\\Program.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Program.cs",
               "RelativeToolTip": "PaymentService\\Program.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-05T04:50:56.295Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\NotificationService\\Program.cs",
+              "DocumentMoniker": "E:\\Graduation\\ReverseProxy\\Program.cs",
+              "RelativeDocumentMoniker": "ReverseProxy\\Program.cs",
+              "ToolTip": "E:\\Graduation\\ReverseProxy\\Program.cs",
+              "RelativeToolTip": "ReverseProxy\\Program.cs",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAAACMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T03:41:15.08Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InfraPaths.cs",
+              "DocumentMoniker": "E:\\Graduation\\ReverseProxy\\Helpers\\InfraPaths.cs",
+              "RelativeDocumentMoniker": "ReverseProxy\\Helpers\\InfraPaths.cs",
+              "ToolTip": "E:\\Graduation\\ReverseProxy\\Helpers\\InfraPaths.cs",
+              "RelativeToolTip": "ReverseProxy\\Helpers\\InfraPaths.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T03:44:01.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AppHost.cs",
+              "DocumentMoniker": "E:\\Graduation\\Graduation.AppHost\\AppHost.cs",
+              "RelativeDocumentMoniker": "Graduation.AppHost\\AppHost.cs",
+              "ToolTip": "E:\\Graduation\\Graduation.AppHost\\AppHost.cs",
+              "RelativeToolTip": "Graduation.AppHost\\AppHost.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T03:40:07.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IdempotencyStatus.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Domain\\IdempotencyStatus.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Domain\\IdempotencyStatus.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Domain\\IdempotencyStatus.cs",
+              "RelativeToolTip": "PaymentService\\Domain\\IdempotencyStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:18.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymentIdempotencyConfiguration.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Data\\Configurations\\PaymentIdempotencyConfiguration.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Data\\Configurations\\PaymentIdempotencyConfiguration.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Data\\Configurations\\PaymentIdempotencyConfiguration.cs",
+              "RelativeToolTip": "PaymentService\\Data\\Configurations\\PaymentIdempotencyConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:16.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentDbContext.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Data\\PaymentDbContext.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Data\\PaymentDbContext.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Data\\PaymentDbContext.cs",
+              "RelativeToolTip": "PaymentService\\Data\\PaymentDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:15.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Domain\\PaymentService.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Domain\\PaymentService.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Domain\\PaymentService.cs*",
+              "RelativeToolTip": "PaymentService\\Domain\\PaymentService.cs*",
+              "ViewState": "AgIAANgAAAAAAAAAAAAAAOkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T04:35:13.983Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentConfiguration.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Data\\Configurations\\PaymentConfiguration.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Data\\Configurations\\PaymentConfiguration.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Data\\Configurations\\PaymentConfiguration.cs",
+              "RelativeToolTip": "PaymentService\\Data\\Configurations\\PaymentConfiguration.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:12.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PaymentStatusResponse.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Contracts\\PaymentStatusResponse.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Contracts\\PaymentStatusResponse.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Contracts\\PaymentStatusResponse.cs",
+              "RelativeToolTip": "PaymentService\\Contracts\\PaymentStatusResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:09.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CreatePaymentRequest.cs",
+              "DocumentMoniker": "E:\\Graduation\\PaymentService\\Contracts\\CreatePaymentRequest.cs",
+              "RelativeDocumentMoniker": "PaymentService\\Contracts\\CreatePaymentRequest.cs",
+              "ToolTip": "E:\\Graduation\\PaymentService\\Contracts\\CreatePaymentRequest.cs",
+              "RelativeToolTip": "PaymentService\\Contracts\\CreatePaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:56:08.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PaymentClient.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Infrastructure\\PaymentClient.cs",
+              "RelativeDocumentMoniker": "OrderService\\Infrastructure\\PaymentClient.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Infrastructure\\PaymentClient.cs",
+              "RelativeToolTip": "OrderService\\Infrastructure\\PaymentClient.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:48.137Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "NotificationClient.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Infrastructure\\NotificationClient.cs",
+              "RelativeDocumentMoniker": "OrderService\\Infrastructure\\NotificationClient.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Infrastructure\\NotificationClient.cs",
+              "RelativeToolTip": "OrderService\\Infrastructure\\NotificationClient.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:44.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "PaymentStatus.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\PaymentStatus.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\PaymentStatus.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\PaymentStatus.cs",
+              "RelativeToolTip": "OrderService\\Domain\\PaymentStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:41.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\PaymentService.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\PaymentService.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\PaymentService.cs",
+              "RelativeToolTip": "OrderService\\Domain\\PaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:40.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "OutboxType.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\OutboxType.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxType.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\OutboxType.cs",
+              "RelativeToolTip": "OrderService\\Domain\\OutboxType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:39.825Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Helpers.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Helpers.cs",
+              "RelativeDocumentMoniker": "OrderService\\Helpers.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Helpers.cs",
+              "RelativeToolTip": "OrderService\\Helpers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:50:23.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Program.cs",
+              "RelativeDocumentMoniker": "OrderService\\Program.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Program.cs",
+              "RelativeToolTip": "OrderService\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-05T04:16:38.969Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "OutboxStatus.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\OutboxStatus.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxStatus.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\OutboxStatus.cs",
+              "RelativeToolTip": "OrderService\\Domain\\OutboxStatus.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:38.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "OutboxService.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\OutboxService.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxService.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\OutboxService.cs",
+              "RelativeToolTip": "OrderService\\Domain\\OutboxService.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:35.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "OutboxMessage.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\OutboxMessage.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\OutboxMessage.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\OutboxMessage.cs",
+              "RelativeToolTip": "OrderService\\Domain\\OutboxMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:34.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "OrderApplicationService.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\OrderApplicationService.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\OrderApplicationService.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\OrderApplicationService.cs",
+              "RelativeToolTip": "OrderService\\Domain\\OrderApplicationService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:28.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Order.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Domain\\Order.cs",
+              "RelativeDocumentMoniker": "OrderService\\Domain\\Order.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Domain\\Order.cs",
+              "RelativeToolTip": "OrderService\\Domain\\Order.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:20.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "OrderDbContext.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Data\\OrderDbContext.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\OrderDbContext.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Data\\OrderDbContext.cs",
+              "RelativeToolTip": "OrderService\\Data\\OrderDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:17.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "OutboxMessageConfiguration.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Data\\Configurations\\OutboxMessageConfiguration.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\Configurations\\OutboxMessageConfiguration.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Data\\Configurations\\OutboxMessageConfiguration.cs",
+              "RelativeToolTip": "OrderService\\Data\\Configurations\\OutboxMessageConfiguration.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABYAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:55:02.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "OrderConfiguration.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Data\\Configurations\\OrderConfiguration.cs",
+              "RelativeDocumentMoniker": "OrderService\\Data\\Configurations\\OrderConfiguration.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Data\\Configurations\\OrderConfiguration.cs",
+              "RelativeToolTip": "OrderService\\Data\\Configurations\\OrderConfiguration.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:54:59.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "PaymentResponse.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Contracts\\PaymentResponse.cs",
+              "RelativeDocumentMoniker": "OrderService\\Contracts\\PaymentResponse.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Contracts\\PaymentResponse.cs",
+              "RelativeToolTip": "OrderService\\Contracts\\PaymentResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:54:55.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "PaymentRequest.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Contracts\\PaymentRequest.cs",
+              "RelativeDocumentMoniker": "OrderService\\Contracts\\PaymentRequest.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Contracts\\PaymentRequest.cs",
+              "RelativeToolTip": "OrderService\\Contracts\\PaymentRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:54:53.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "DeliverRequest.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Contracts\\DeliverRequest.cs",
+              "RelativeDocumentMoniker": "OrderService\\Contracts\\DeliverRequest.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Contracts\\DeliverRequest.cs",
+              "RelativeToolTip": "OrderService\\Contracts\\DeliverRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:54:52.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateOrderRequest.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\Contracts\\CreateOrderRequest.cs",
+              "RelativeDocumentMoniker": "OrderService\\Contracts\\CreateOrderRequest.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\Contracts\\CreateOrderRequest.cs",
+              "RelativeToolTip": "OrderService\\Contracts\\CreateOrderRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:54:44.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "OutboxDispatcherHostedService.cs",
+              "DocumentMoniker": "E:\\Graduation\\OrderService\\BackgroundServices\\OutboxDispatcherHostedService.cs",
+              "RelativeDocumentMoniker": "OrderService\\BackgroundServices\\OutboxDispatcherHostedService.cs",
+              "ToolTip": "E:\\Graduation\\OrderService\\BackgroundServices\\OutboxDispatcherHostedService.cs",
+              "RelativeToolTip": "OrderService\\BackgroundServices\\OutboxDispatcherHostedService.cs",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAQwFkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:54:13.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Extensions.cs",
+              "DocumentMoniker": "E:\\Graduation\\Graduation.ServiceDefaults\\Extensions.cs",
+              "RelativeDocumentMoniker": "Graduation.ServiceDefaults\\Extensions.cs",
+              "ToolTip": "E:\\Graduation\\Graduation.ServiceDefaults\\Extensions.cs",
+              "RelativeToolTip": "Graduation.ServiceDefaults\\Extensions.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAAwFoAAAB0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:49:27.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ToxiProxyConfigurator.cs",
+              "DocumentMoniker": "E:\\Graduation\\Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "RelativeDocumentMoniker": "Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "ToolTip": "E:\\Graduation\\Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "RelativeToolTip": "Graduation.AppHost\\ToxiProxyConfigurator.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAHkAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T01:47:26.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Graduation\\ReverseProxy\\appsettings.json",
+              "RelativeDocumentMoniker": "ReverseProxy\\appsettings.json",
+              "ToolTip": "E:\\Graduation\\ReverseProxy\\appsettings.json",
+              "RelativeToolTip": "ReverseProxy\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-05T03:50:27.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Graduation\\NotificationService\\Program.cs",
               "RelativeDocumentMoniker": "NotificationService\\Program.cs",
-              "ToolTip": "C:\\Users\\soswe\\Desktop\\\u0412\u041A\u0420\\App\\NotificationService\\Program.cs",
+              "ToolTip": "E:\\Graduation\\NotificationService\\Program.cs",
               "RelativeToolTip": "NotificationService\\Program.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-05T03:36:35.475Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Graduation\\Graduation.AppHost\\appsettings.json",
+              "RelativeDocumentMoniker": "Graduation.AppHost\\appsettings.json",
+              "ToolTip": "E:\\Graduation\\Graduation.AppHost\\appsettings.json",
+              "RelativeToolTip": "Graduation.AppHost\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-05T03:51:54.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "load.js",
+              "DocumentMoniker": "E:\\Graduation\\k6\\load.js",
+              "RelativeDocumentMoniker": "k6\\load.js",
+              "ToolTip": "E:\\Graduation\\k6\\load.js",
+              "RelativeToolTip": "k6\\load.js",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-02-05T04:00:19.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

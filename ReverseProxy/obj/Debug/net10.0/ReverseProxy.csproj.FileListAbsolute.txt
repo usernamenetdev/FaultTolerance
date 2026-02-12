@@ -60,3 +60,6 @@ C:\Users\soswe\Desktop\ВКР\App\ReverseProxy\bin\Debug\net10.0\Polly.Extension
 C:\Users\soswe\Desktop\ВКР\App\ReverseProxy\bin\Debug\net10.0\Polly.RateLimiting.dll
 C:\Users\soswe\Desktop\ВКР\App\ReverseProxy\bin\Debug\net10.0\Graduation.ServiceDefaults.dll
 C:\Users\soswe\Desktop\ВКР\App\ReverseProxy\bin\Debug\net10.0\Graduation.ServiceDefaults.pdb
+E:\Graduation\ReverseProxy\obj\Debug\net10.0\ReverseProxy.dll
+E:\Graduation\ReverseProxy\obj\Debug\net10.0\refint\ReverseProxy.dll
+E:\Graduation\ReverseProxy\obj\Debug\net10.0\ReverseProxy.pdb

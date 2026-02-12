@@ -12,7 +12,7 @@ const magicErr = new Counter('magic_err');
 
 const BASE_URL = __ENV.BASE_URL || 'http://127.0.0.1:5167';
 const SLEEP_SEC = __ENV.SLEEP ? Number(__ENV.SLEEP) : 0.2;           // было 0.1
-const REQ_TIMEOUT = __ENV.REQ_TIMEOUT || '10s';                       // чтобы не висеть 60s
+const REQ_TIMEOUT = __ENV.REQ_TIMEOUT || '10s';                       // клиентский таймаут
 
 function makeOrderBody() { return JSON.stringify({}); }
 function makeMagicBody() { return JSON.stringify({}); }
@@ -28,7 +28,7 @@ function uuidv4() {
 let vuUserId;
 
 export const options = {
-    // Мягкий ramp-up вместо мгновенных 50 VU
+    // Мягкий ramp-up до 10 VU
     scenarios: {
         steady: {
             executor: 'ramping-vus',
@@ -59,7 +59,7 @@ export default function () {
             'Content-Type': 'application/json',
             'X-User-Id': vuUserId,
         },
-        timeout: REQ_TIMEOUT, // <-- ключевой фикс против 60s зависаний
+        timeout: REQ_TIMEOUT, 
     };
 
     if (isOrders) {

@@ -102,7 +102,6 @@ app.MapPost("/orders", async Task<IResult> (
     return Results.Created("/", order);
 })
 .AddOpenApiOperationTransformer((operation, ctx, ct) => {
-    // Описание параметра Idempotency-Key для OpenAPI (аналогично PaymentService)
     operation.Parameters ??= new List<IOpenApiParameter>();
     operation.Parameters.Add(new OpenApiParameter
     {

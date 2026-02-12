@@ -87,7 +87,7 @@ public sealed class OutboxDispatcherHostedService : BackgroundService
             }
             catch (BrokenCircuitException)
             {
-                // фиксируем short-circuit по зависимости (требование по метрикам CB)
+                // фиксируем short-circuit по зависимости
                 metrics.CircuitBreakerShortCircuit("notificationservice");
 
                 msg.Attempts++;

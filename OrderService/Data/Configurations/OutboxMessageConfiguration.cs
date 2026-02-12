@@ -20,7 +20,7 @@ public sealed class OutboxMessageConfiguration : IEntityTypeConfiguration<Outbox
             .IsRequired();
 
         b.Property(x => x.UserId)
-            .HasMaxLength(64) // под X-User-Id (строка). Если точно GUID — можешь сделать 36.
+            .HasMaxLength(64) 
             .IsUnicode(false)
             .IsRequired();
 

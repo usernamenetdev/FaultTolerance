@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Metrics\**" />
+    <Content Remove="Metrics\**" />
+    <EmbeddedResource Remove="Metrics\**" />
+    <None Remove="Metrics\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="13.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.2">
@@ -19,10 +26,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Graduation.ServiceDefaults\Graduation.ServiceDefaults.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Metrics\" />
   </ItemGroup>
 
 </Project>

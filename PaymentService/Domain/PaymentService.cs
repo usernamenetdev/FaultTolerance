@@ -65,7 +65,7 @@ namespace PaymentService.Domain
             {
                 await SaveChangesCriticalAsync(dbCt);
 
-                // ✅ idempotency MISS: ключ новый, обработка будет выполняться
+                // idempotency MISS: ключ новый, обработка будет выполняться
                 _metrics.RecordIdempotencyResult("payment_create", IdempotencyResult.Miss);
             }
             catch (DbUpdateException ex) when (IsUniqueViolation(ex))
@@ -81,7 +81,7 @@ namespace PaymentService.Domain
 
                 if (!string.Equals(existing.RequestHash, requestHash, StringComparison.Ordinal))
                 {
-                    // ✅ idempotency CONFLICT: тот же ключ, но другие параметры
+                    // idempotency CONFLICT: тот же ключ, но другие параметры
                     _metrics.RecordIdempotencyResult("payment_create", IdempotencyResult.Conflict);
 
                     return Results.Conflict(new
@@ -93,7 +93,7 @@ namespace PaymentService.Domain
 
                 if (existing.Status == IdempotencyStatus.Completed)
                 {
-                    // ✅ idempotency HIT: результат уже зафиксирован
+                    // idempotency HIT: результат уже зафиксирован
                     _metrics.RecordIdempotencyResult("payment_create", IdempotencyResult.Hit);
 
                     return Results.Ok(new
@@ -104,7 +104,7 @@ namespace PaymentService.Domain
                     });
                 }
 
-                // ✅ idempotency IN_PROGRESS: уже выполняется (возвращаем 202)
+                // idempotency IN_PROGRESS: уже выполняется (возвращаем 202)
                 _metrics.RecordIdempotencyResult("payment_create", IdempotencyResult.InProgress);
 
                 return Results.Accepted($"/payments/{existing.PaymentId}", new
@@ -231,7 +231,7 @@ namespace PaymentService.Domain
                 // Клиент/прокси отменил запрос, но сервис ещё жив.
                 // Сохранение финального состояния в БД.
                 using var cts = CancellationTokenSource.CreateLinkedTokenSource(_appStopping);
-                cts.CancelAfter(TimeSpan.FromSeconds(2)); // коротко, чтобы не залипнуть
+                cts.CancelAfter(TimeSpan.FromSeconds(2));
 
                 await _db.SaveChangesAsync(cts.Token);
             }

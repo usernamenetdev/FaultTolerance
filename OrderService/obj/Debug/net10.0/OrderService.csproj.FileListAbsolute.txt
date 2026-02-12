@@ -185,3 +185,6 @@ C:\Users\soswe\Desktop\ВКР\App\OrderService\bin\Debug\net10.0\Aspire.Microsof
 C:\Users\soswe\Desktop\ВКР\App\OrderService\bin\Debug\net10.0\Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore.dll
 C:\Users\soswe\Desktop\ВКР\App\OrderService\obj\Debug\net10.0\OrderService.sourcelink.json
 C:\Users\soswe\Desktop\ВКР\App\OrderService\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt
+E:\Graduation\OrderService\obj\Debug\net10.0\OrderService.dll
+E:\Graduation\OrderService\obj\Debug\net10.0\refint\OrderService.dll
+E:\Graduation\OrderService\obj\Debug\net10.0\OrderService.pdb
